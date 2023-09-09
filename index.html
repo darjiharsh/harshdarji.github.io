@@ -240,7 +240,7 @@
           </p>
 
           <div class="btn-group">
-            <button class="btn btn-primary">Download cv</button>
+            <button class="btn btn-primary" id="btnDownloadCV">Download cv</button>
           </div>
 
         </div>
@@ -970,4 +970,22 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
   document.getElementById('phone').value = '';
   document.getElementById('message').value = '';
 });
+</script>
+
+<script>
+  // JavaScript to handle the button click event
+  document.getElementById("btnDownloadCV").addEventListener("click", function() {
+      // Replace 'resume.pdf' with the actual URL of your resume file
+      var resumeUrl = 'https://example.com/path-to-your-resume.pdf';
+
+      // Create an anchor element to trigger the download
+      var downloadLink = document.createElement('a');
+      downloadLink.href = resumeUrl;
+
+      // Specify the download attribute to set the desired filename
+      downloadLink.download = 'Harsh_Darji_Resume.pdf';
+
+      // Simulate a click event to trigger the download
+      downloadLink.click();
+  });
 </script>
