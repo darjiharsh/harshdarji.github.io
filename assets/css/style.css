@@ -450,7 +450,15 @@ body.active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus)::before { width: 100%; }
+/* .navbar-link:is(:hover, :focus)::before { width: 100%; } */
+
+/* add hover effect blur to navbar */
+.navbar-link:is(:hover, :focus) {
+  text-decoration: underline;
+  text-decoration-color: var(--raw-seinna);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 4px;
+}
 
 
 
