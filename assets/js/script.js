@@ -41,10 +41,20 @@ navToggleBtn.addEventListener("click", function () {
   elemToggleFunc(navToggleBtn);
   elemToggleFunc(navbar);
   elemToggleFunc(document.body);
-
 });
 
+/**
+ * close navbar toggle when click on any link
+ */
 
+const navLinks = document.getElementsByClassName("navbar-link");
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function () {
+    elemToggleFunc(navToggleBtn);
+    elemToggleFunc(navbar);
+    elemToggleFunc(document.body);
+  });
+}
 
 /**
  * skills toggle
